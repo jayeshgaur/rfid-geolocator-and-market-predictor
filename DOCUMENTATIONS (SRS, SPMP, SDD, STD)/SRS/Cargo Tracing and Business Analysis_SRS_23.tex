@@ -1,0 +1,250 @@
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{etoolbox}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{geometry}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[pdftex]{hyperref}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+ \renewcommand{\familydefault}{\rmdefault}
+
+
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Saurabh Baj,Niyati Daftary,Jayesh Gaur,Aditya Jawalikar},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+               % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+
+\begin{document}
+
+
+    \begin{center}
+        \Huge{ \textbf{ CARGO TRACING \\ AND \\ BUSINESS ANALYSIS} }
+    
+   
+      \textbf{
+     \Huge{ \newline \newline \newline  \newline    Group Id- 23 }  }
+     
+     \textbf{
+     \Huge{ \newline  Guide- Prof. Kirankumari Sinha \newline} }
+     
+     \textbf{
+     \Huge{ 1514068- Saurabh Baj} }
+     
+     \textbf{
+     \Huge{  1514074- Niyati Daftary} }
+     
+     \textbf{
+     \Huge{ 1514080- Jayesh Gaur} }
+     
+     \textbf{
+     \Huge{ 1514085- Aditya Jawalikar} }
+     
+     \end{center}
+     
+   
+    \newpage
+    
+    \begin{flushright}
+	\newline \newline 
+    \begin{bfseries}
+        \Huge{ SOFTWARE REQUIREMENT\\ SPECIFICATION}\\
+        \vspace{1.9cm}
+    
+    \end{bfseries}
+\end{flushright}
+\newpage
+\tableofcontents
+\newpage
+
+
+\chapter{INTRODUCTION  \newline }
+
+\section{Purpose}
+Industrialization has proved to be one of the biggest factors for globalization all over the world. Due to globalization, these industries are achieving business growth at a very rapid rate. The sellers are producing goods in one country and selling the same in other, thus making huge profits. There is no system to keep a track of the goods being transported. Thus to help the seller, we propose a Cargo Tracing and Business Analysis System which helps in Goods Tracing for the seller. We also propose to make a business analysis model which will study the trends or patterns in the past records and predict the appropriate market place for the seller.
+\newline \newline
+ 
+ \section{Project Scope}
+ 
+ Due to human errors, at times the shipments are manhandled and reach wrong destinations. The proposed Cargo Tracing and Business Analysis system will help the seller to track the shipments made to different locations and thus using this system the errors can be handled with the help of pre-defined triggers to send notifications when a particular cargo which is expected to arrive at a checkpoint, does not arrive. 
+ Along with this, future market place suggestions will also be provided to the seller based on analysis of current trends based on previous records containing details about Shipment details, Source, Destination, Region type, Season, Date/time and so on. Furthermore, the system also helps the shipment industry to manage orders based on the profit related to particular season, destination and cargo type.
+ 
+ \newpage
+
+\chapter{SPECIFIC REQUIREMENTS \newline }
+The following Sections consists the requirement which are necessary for the proposed system to function at its optimal limits without any hindrances.\newline 
+
+\section{External Interface Requirements}
+
+This section provides a detailed description of all inputs into and outputs from the system. It also gives a description of the hardware, software and communication interfaces which provides basic knowledge of the system.
+
+\subsection{User Interface}
+ \begin{itemize}
+ \item The Cargo Tracing and Business Analysis System helps the seller of the goods to trace the cargo. For this, the seller needs to register on the website provided. First there will be a registration process which is to be followed by the seller. The registration form includes the following fields-
+ 
+ \begin{itemize} 
+   \item Name
+   \item Address
+   \item Contact Number ( Personal and Office )
+   \item Country
+   \item Seller Registration Number
+   \item Email-id
+   \item Username
+   \item Password
+   
+   \end{itemize}
+   
+
+ \item After successful registration, the seller will be able to log-in to the system. All the sellers who are successfully registered will be assigned a unique id which they can see in their profile. This unique id will help the seller to trace their respective cargo. As the cargo passes the checkpoints, the seller would be notified about it on the time-line of the cargo shipment. This will also be supported by notifying the user about the date and time on which the shipment has cleared that checkpoint. Thus, the user interface is simple, compact and reliable. 
+ 
+ 
+  \end{itemize}
+  
+\section{Hardware Interface}
+The proposed system  consists of RFID tags, the scanner as the hardware for the system.The following are the hardware required for the system-
+ \begin{enumerate}
+    
+ 
+     \item Rc522 RFID Scanner
+     \item EspNode MCU 8826 Wifi Module
+     \item Arduino Board or any other Uno Board
+     \item Any RFID Tag
+     
+ \end{enumerate}
+ 
+The Wifi Module used in the system will be able to send data to the database of the system where all the values will get stored. The RFID tags are independent of the scanner used, so any type of the scanner can be used at different checkpoints as based on availability.
+
+\section{Software Interface}
+
+Each and every RFID tags will have their unique hex number pre included with them. The tags will generate the binary files when they are scanned by the scanner. There will be a main code written in the Arduino/ Uno Board that establishes connection and control with all the hardware modules mentioned. Both the Rc522 scanner and the Wifi module are connected with arduino with the drivers provided. These interfaces will be used for about the scanners and RFID tags. Now, the web portal will be designed by using the following interfaces.
+
+ 
+ \begin{itemize}
+ \item { Server side}
+ \begin{itemize}
+    
+ 
+ \item An database server and web server which will accept all requests from the client and forward it accordingly. A database will be hosted centrally using MySQL.
+ \end{itemize}
+
+
+\item {Client side} 
+
+
+\begin{itemize}
+\item An OS which is capable of running a modern web browser which handles requests and responses of the comunnication.
+
+\item A web browser with the Javascript and PHP technologies enabled.
+\item  Android Version of Jellybean(4.1) and above would be recommended for the mobile devices. \newline 
+
+
+
+\end{itemize}
+\end{itemize}
+
+\section{Communication Protocols}
+
+As mentioned above, the scanner will be using the Wifi Module for communication between the database and the RFID tags when scanned successfully. HTTP, FTP are the communication protocols used in the system for the web portal. To connect to back-end processing with PHP JSON is useful.
+
+
+\section{Software Product Features}
+The proposed system will provide the seller with own portal to track the shipment made by the seller. The dashboard will help the seller to track all their shipment activities on one screen. This dashboard will keep updating the seller regarding all the activities at the checkpoints during the whole process.The following are the functional requirements gathered for the proposed system.
+\newline \newline
+
+
+   
+ \subsection{  Login }
+   
+   The system will help the seller to login to the system to be able to trace the cargo shipment as and when required. For successful login to the portal,the seller has to enter the correct credentials for the username and password otherwise the system will throw error.
+   
+   \subsection{Register}
+   
+   Any seller form any country can register itself to the portal of Cargo Tracing. For this, registration process would require personal details like name, number, address, email, passport number to be entered by the seller.On successful registration, the seller would then be able to use our system.All the personal details are kept secured.
+   
+   \subsection{ Filter}
+   
+   As there can be number of shipments made by the seller, the seller may need to segregate out some of the shipments made. To make this happen, the seller would have an option to filter the shipments based on the date of shipment, the month of shipment or the year of shipment.
+   
+   \subsection{ View Timeline}
+   
+   The seller would be able to trace the shipment based on a timeline provided on the dashboard. The timeline specifies the shipment details such as the date of scanning of shipment at a particular time, the arrival time, the departure of the shipment and so on.
+   
+   \subsection{ Scanning}
+   
+   At the checkpoints, the cargo shipment with RFID would be scanned at that location. The RFID scanner present at the checkpoint  will trigger the database of the system after sucessful scanning of RFID stating the name of the checkpoint and the location of the same, the arrival date of the shipment and the arrival time of the shipment. The shipment would be then transfered for the further processing either to next checkpoint or it will be unloaded.
+   
+   \subsection{ Erasing}
+   
+   When the shipment passes through the last checkpoint and the cargo is unloaded, the RFID tags will be erased of all the data which it collected in the whole journey from source of shipment to the destination of the shipment. These tags will be erased programmatically and all the tags will be reused again for other shipments.  \newline \newline
+      
+    
+
+
+
+
+\section{Software System Attributes}
+The following are the system attributes: \newline
+
+    
+    
+    
+    \subsection{ Reliability}
+    
+    The final System will be a reliable one as it will pass through a series of testing procedures regarding the working of whole system. The trust factor of the seller relies on giving the perfect tracing of the cargo shipment along with the business analysis of the seller with high precision. The mean time of failure is very large as the deployment of web portal will be good enough to handle large requests. The probability of the system unavailability largely depends on the scanners used for RFID tags. The weather conditions mainly at port may cause hindrance in scanning and may make system unavailable for some time. Thus the rate of failure occurrence of the system is quite small. \newline
+    
+    \subsection{ Availability}
+    
+    Some times due to load on the server which is in process may malfunction. This may cause non-availability of the system. To recover from this inconsistent state, there will be checkpoints saved of the previous working and stable version of the system which will help in successful recovery of the system. The recovery phase of the system will not take long duration, so maximum of half hour would be required to recover the system to it's normal state. The scanners will be available whenever required till the continuous supply of electricity is provided.
+    
+    \subsection{ Security}
+    
+    This feature is important aspect of our system as the system will be used world-wide. When the seller enters critical information of identity such as the Passport number, the seller license number, these values will not be directly stored in database but with the help of cryptographic algorithms such as SHA or MD5 will be applied on those values. Every care would be taken to protect the RFID from being forged or stolen. This can be implemented by reviewing the RFID data and logs at each checkpoint. \newline
+    
+    \subsection{ Maintainability}
+    
+    The maintenance of the system is quite easy work. The web portal for the seller is easier to maintain. Any upgradation to the portal can be easily managed as there are no complex structures, API's used nor any kind of third-party services. The CSS, Javascript, PHP codes, are all developed by developers from the team so the code is easier to maintain and well readable. The system will be stable when new releases or the version of the system are rolled out.\newline
+    
+    \subsection{ Portability}
+    
+    Requirements do change with the time based on stakeholders decision. So to meet the needs of stakeholders, there will be changes made to the system. The newly developed system will easily adapt to the current working environment and there will be some functionality added to the system which will be used for reverse compatibility. \newline
+    
+    \subsection{ Performance}
+    
+    The performance of the system or to be specific the web portal will depend on internet speed. The performance of the RFID tags will depend on how well the tags are kept secured. As the weather conditions change from country to country at a particular time, the tags might get damaged. Moreover, the scanner should be placed at a location where they do not catch any moisture or not get damaged while the containers are transported. Any mishandling of scanners or tags might result in degradation of the entire system.\newline \newline
+    
+    \newpage
+    
+
+\section{Database Requirements}
+The Web Portal will maintain a database which will contain all the details of the seller such as the number,name,address,etc. The passport number and other confidential details will be kept secured. The other details of shipment such as the shipment number, the source, the destination, and also the intermediate checkpoints will also be stored to help the seller in tracing of shipment.
+The Authority to access the database will be given only to
+the administrator who will maintain the web portal. There will be another attributes which will be stored in database to keep track of the RFID unique hex values along with the other details such as timestamp and so on.
+
+\end{document}

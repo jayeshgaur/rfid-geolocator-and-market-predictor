@@ -1,0 +1,448 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{etoolbox}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{geometry}
+\usepackage{hhline}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[pdftex]{hyperref}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+ \renewcommand{\familydefault}{\rmdefault}
+
+
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Saurabh Baj,Niyati Daftary,Jayesh Gaur,Aditya Jawalikar},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+               % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+
+\begin{document}
+
+
+    \begin{center}
+        \Huge{ \textbf{ CARGO TRACING \\ AND \\ BUSINESS ANALYSIS} }
+    
+   
+      \textbf{
+     \Huge{ \newline \newline \newline  \newline    Group Id- 23 }  }
+     
+     \textbf{
+     \Huge{ \newline  Guide- Prof. Kirankumari Sinha \newline} }
+     
+     \textbf{
+     \Huge{ 1514068- Saurabh Baj} }
+     
+     \textbf{
+     \Huge{  1514074- Niyati Daftary} }
+     
+     \textbf{
+     \Huge{ 1514080- Jayesh Gaur} }
+     
+     \textbf{
+     \Huge{ 1514085- Aditya Jawalikar} }
+     
+     \end{center}
+     
+   
+    \newpage
+    
+    \begin{flushright}
+	\newline \newline 
+    \begin{bfseries}
+        \Huge{ SOFTWARE PROJECT MANAGEMENT PLAN}\\
+        \vspace{1.9cm}
+    
+    \end{bfseries}
+\end{flushright}
+\newpage
+\tableofcontents
+\newpage
+\section{INTRODUCTION}
+\subsection{Project Overview}
+Today’s world is growing at a very faster rate with the help of Technology. A lot of different industries are using the latest technology to increase their growth, thus boosting globalization. The sellers are producing goods in one country and selling the same in other country, thus making huge profits. As huge quantity of cargo is shipped everyday by different sellers, people tend to lose some of it. Besides, such a huge transport of material from once place to another can also be studied thoroughly and the trade can be modified to maximize profit. Thus to help the sellers, we are proposing a Cargo Tracing and Business Analysis System. 
+
+\newpage
+\subsection{Project Deliverables}
+\begin{center}
+\begin{tabular} { | m{3.5cm} | m{6.5cm} |  m{2.5cm} | }
+	\hline 
+	\textbf{Deliverables}  & \textbf{Description} & \textbf{Delivery Date}\\ 
+	\hline 
+	Software Project Management Plan   & A complete formal project plan, including technical and managerial processes that will be implemented in the development and delivery of the system & 30/09/2018 \\
+	\hline 
+		Software Requirements Specification   & A formal document detailing the functional and non-functional requirements of the system & 30/09/2018 \\
+	\hline 
+		Software Design Specification  & A formal document detailing the component designs as well as the relationships among components & 05/10/2018 \\
+	\hline 
+		Software Test Document  & Formal documentation detailing scenarios that must be followed in order to ensure that the product software is satisfactorily tested. & 14/10/2018 \\
+	\hline 
+		Implementation of frontend and hardware components.  & Software files to form the backbone of the system and their integration into the hardware used & 14/02/2019 \\
+	\hline 
+		Final Presentation  & A demonstration of the product software and a presentation of the project experience & March 2019 \\
+	\hline 
+\end{tabular}
+\end{center}
+
+\newpage
+\section{PROJECT ORGANIZATION}
+\subsection{Software Process Model}
+The process model used is Prototype Process Model 
+Prototype is a working model of software with some limited functionality. The prototype does not always hold the exact logic used in the actual software application and is an extra effort to be considered under effort estimation.
+Prototyping is used to allow the users evaluate developer proposals and try them out before implementation. It also helps understand the requirements which are user specific and may not have been considered by the developer during product design.
+\begin{figure}[h!]
+	\caption{Prototype Model}
+	\fbox{\includegraphics[width=16cm,height=7cm]{prototype.jpg}}
+\end{figure}
+
+\newpage
+\subsection{Roles and Resposibilities}
+\begin{center}
+	\begin{tabular} { |c|c|c| }
+		\hline 
+		\textbf{Roles}  & \multicolumn{2}{c|}{\textbf{Responsibilities}}\\ 
+		\hline 
+		\multirow{2}{6em}{Project Co-ordinator} & \multicolumn{2}{c|}{Motivate the team members to perform their tasks in a organized manner } \\  
+		& \multicolumn{2}{c|}{Help the team in allocating deadlines} \\ 
+		\hline
+			\multirow{3}{6em}{Project Guide} & \multicolumn{2}{c|}{Works with the team to help formulate the application strategy} \\  
+		& \multicolumn{2}{c|}{Approves the project documents} \\ 
+		& \multicolumn{2}{c|}{Helps the team in analysing the project from every perspective and set the goals} \\
+		\hline		
+		\multirow{6}{6em}{Project Manager} & \multicolumn{2}{c|}{Plans, organizes, and coordinates the team project} \\  
+		& \multicolumn{2}{c|}{Schedules and prepares team meetings} \\ 
+	& \multicolumn{2}{c|}{Resolves conflicts} \\
+	& \multicolumn{2}{c|}{Works as a link between team members} \\
+	& \multicolumn{2}{c|}{Monitors and reports the weekly status of the team} \\
+	& \multicolumn{2}{c|}{Ensures that project deliverables are met} \\
+		\hline		
+			\multirow{2}{6em}{Application Designer} & \multicolumn{2}{c|}{Designs a web application to the problem statement that satisfies the requirements} \\  
+		& \multicolumn{2}{c|}{Assists the Technical Writers in documenting the design} \\ 
+		\hline
+		\multirow{4}{6em}{Application Developer} & \multicolumn{2}{c|}{Develops the android application} \\  
+		& \multicolumn{2}{c|}{Determines the data needs for the solution} \\ 
+		& \multicolumn{2}{c|}{Determines what hardware and tools are necessary} \\ 
+		& \multicolumn{2}{c|}{Fixes bugs found by the Testers} \\ 
+		\hline
+		\multirow{2}{6em}{Database Developer} & \multicolumn{2}{c|}{Develops and populates Databases} \\  
+		& \multicolumn{2}{c|}{Ensures proper operation and interaction with entire system application} \\ 
+	\hline
+		\multirow{1}{6em}{Tester} & \multicolumn{2}{c|}{Tests all the application modules} \\  
+\hline
+		\multirow{3}{6em}{Technical writer} & \multicolumn{2}{c|}{Coordinates the project documents and their review by all team members} \\  
+		& \multicolumn{2}{c|}{	
+			Collects, proofreads, and integrates document parts} \\ 
+		& \multicolumn{2}{c|}{Generates the final version of all the documents} \\ 
+	\hline
+	\end{tabular}
+\end{center}
+
+\newpage
+\subsection{Tools and Techniques}
+\begin{itemize}
+	\item LATEX for SRS, SPMP, SDD, STD
+	\item Gantt project for planning and to prepare the time-line chart
+	\item Rational rose for UML diagrams
+	\item Microsoft powerpoint for presentation for the users and project personnel
+	\item Python-based kivy framework
+	\item MATLAB to implement the image-processing algorithms
+	\item Python-based image processing libraries
+	\end{itemize}
+
+\newpage
+\section{PROJECT MANAGEMENT PLAN}
+\subsection{Tasks}
+\subsubsection{Task 1 - Requirement analysis}
+\textbf{Description}\\
+Definition of the different requirements which will help the users get a good gist of the project. It provides the basic understanding of the problem and nature of the solution. \\ \\
+\textbf{Deliverables and milestones}\\
+The task provides a lis0t of the various requirements and their analysis for paving the path of design phase.\\ \\
+\textbf{Resources needed}\\
+Effort, time and knowledge about the software.\\ \\
+\textbf{Dependencies and constraints}\\
+The requirements must be documented , testable and related to the needs and defined to a level sufficient for system design.\\ \\
+\textbf{Risks and contingencies}\\
+If the team does not have knowledge about the software, then it can gather the informationby communicating with the experts in that field.\\ \\
+
+\subsubsection{Task 2 - Software requirement specification}
+\textbf{Description}\\
+Description of the behaviour of the system to be developed and the features in the scope of the project. \\ \\
+\textbf{Deliverables and milestones}\\
+SRS delineates the features of the project and serves as a guide to the developers.\\ \\
+\textbf{Resources needed}\\
+Latex\\ \\
+\textbf{Dependencies and constraints}\\
+SRS should be documented in a way understandable to other developers to identify the aspects of the system.\\ \\
+\textbf{Risks and contingencies}\\
+There is a high amount of risk if the SRS is not well documented as the features of the system will not be clear.
+\newpage
+\subsubsection{Task 3 - Software design document}
+\textbf{Description}\\
+The structure of the software to satisfy the requirements. It specifies the software structure, components, interfaces and data necessary for implementation. \\ \\
+\textbf{Deliverables and milestones}\\
+Architecture design, data design, interface and procedural design.\\ \\
+\textbf{Resources needed}\\
+Latex for documentation and IBM Rational Rose for designing purposes\\ \\
+\textbf{Dependencies and constraints}\\
+SDD is developed according to the SRS, so the SRS should provide an entire overview of the system \\ \\
+\textbf{Risks and contingencies}\\
+Risk is involved if the design does not follow the requirements . The design can be revised by proper communication among the development team.\\ \\
+
+\subsubsection{Task 4 - System Test Document}
+\textbf{Description}\\
+Specifies the approach that ensures that the features are adequately tested. \\ \\
+\textbf{Deliverables and milestones}\\
+The document includes all the test cases with results done after finishing the development.\\ \\
+\textbf{Resources needed}\\
+Latex and software test plan\\ \\
+\textbf{Dependencies and constraints}\\
+STD should give entire description about features to be tested, amount of testing in order to save time of the testing team\\ \\
+\textbf{Risks and contingencies}\\
+The risk is when the STD does not cover the entire system as this might cause major problem in the future which can be avoided by developing test cases for entire section wise coverage.\\ \\	
+\newpage
+\subsubsection{Task 5 - Coding and Hardware Integration}
+\textbf{Description}\\
+Actual programming and functionalities of the application\\ \\
+\textbf{Deliverables and milestones}\\
+The different modules and components of the system.\\ \\
+\textbf{Resources needed}\\
+Arduino, RFID tags and sensors.\\ \\
+\textbf{Dependencies and constraints}\\
+Coding phase depends on the SRS and SDD and should be flexible.\\ \\
+\textbf{Risks and contingencies}\\
+Developers may have insufficient amount of knowledge.\\ \\	
+
+\newpage
+\subsection{Risk Table}
+\begin{center}
+	\begin{tabular} { |m{4.5cm}|m{3cm}|m{2cm}|m{1.5cm}|m{4cm}| }
+		\hline
+		\textbf{Risks}  & \textbf{Category} & \textbf{Probability} & \textbf{Impact} & \textbf{Preventive measures}\\ 
+			\hline
+		Server Crash & TI   & 10\% & 1 & Maintain a distributed server system\\
+		\hline
+		Computer crash & TI   & 20\% & 3 & Powerful computers capable of handling high load\\
+			\hline
+		Late delivery & BU   & 30\% & 2 & Implementation of basic functionality first and parallelism in work\\
+			\hline
+		Deviation from Software Engineering Standards & PI   & 50\% & 2 & Proper design standards and principles must be followed\\
+			\hline
+		Poor Quality Documentation & BU   & 50\% & 2 & Proper understanding of the requirements\\
+			\hline
+		Lack of Database Stability & TI   & 40\% & 2 & Update DB Structure as the traffic grows\\
+			\hline
+		Software failure & TI   & 20\% & 1 & Maximize portability\\
+			\hline
+		Staff is inexperienced & ST   & 40\% & 3 & Self-learning using various resources providing correct knowledge\\
+			\hline
+		No internet Connection & TI   & 10\% & 1 & Maintain a backup hotspot/tethering service\\
+			\hline
+		Conflict with other traffic & TI   & 10\% & 1 & Shield the high frequency signals from external noise\\
+			\hline
+		Failure of Scanner & TI   & 30\% & 2 & Facilities of updating the database manually.\\
+			\hline
+		Damage of RFID & TI   & 20\% & 2 & Attach the RFIDs in such a way they aren't easily accessible. \\
+		\hline
+			\end{tabular}
+	\end{center}
+\textbf{Impact Values:}	\\	
+1 – Catastrophic	\\	
+2 – Critical      \\ 
+3 - Marginal    \\
+4 - Negligible
+
+
+\newpage
+\subsection{Risk Template}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{1.28in}p{1.44in}p{-0.13in}p{1.3in}p{1.61in}}
+		\hline
+		%row no:1
+		\multicolumn{5}{|p{6.29in}|}{{\fontsize{14pt}{16.8pt}\selectfont \textbf{Risk information sheet}}} \\
+		\hhline{-----}
+		%row no:2
+		\multicolumn{1}{|p{1.28in}}{\textbf{Risk ID: 1} } & 
+		\multicolumn{2}{|p{1.5in}}{\textbf{Date: September 30, 2019} } & 
+		\multicolumn{1}{|p{1.3in}}{\textbf{Probability: 40\%}} & 
+		\multicolumn{1}{|p{1.61in}|}{\textbf{Impact:2} } \\
+		\hhline{-----}
+		%row no:3
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Description:} \par The database maintained may not be stable which may lead to Database Instability.} \\
+		\hhline{-----}
+		%row no:4
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Refinement/Context: } \par \textbf{Sub-condition 1: }The information gathered was misinterpreted.     } \\
+		\hhline{-----}
+		%row no:5
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Mitigation/Monitoring:} \par 1. Re-gather the information from the user.\par 2. Understand with modules are improper and correct them. } \\
+		\hhline{-----}
+		%row no:6
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Management/Contingency plan/Trigger:} \par Contact the team leader and make a new increment with all the respective changes needed.} \\
+		\hhline{-----}
+		%row no:7
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Current status:} \par Mitigation steps have been initialized.} \\
+		\hhline{-----}
+		%row no:8
+		\multicolumn{2}{|p{2.91in}}{\textbf{Originator:}} & 
+		\multicolumn{3}{|p{3.18in}|}{\textbf{Assigned:}} \\
+		\hhline{-----}
+	\end{tabular}
+\end{table}
+
+
+\subsection{Risk Template}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{1.28in}p{1.44in}p{-0.13in}p{1.3in}p{1.61in}}
+		\hline
+		%row no:1
+		\multicolumn{5}{|p{6.29in}|}{{\fontsize{14pt}{16.8pt}\selectfont \textbf{Risk information sheet}}} \\
+		\hhline{-----}
+		%row no:2
+		\multicolumn{1}{|p{1.28in}}{\textbf{Risk ID:2} } & 
+		\multicolumn{2}{|p{1.5in}}{\textbf{Date:September 30, 2019} } & 
+		\multicolumn{1}{|p{1.3in}}{\textbf{Probability:10\%}} & 
+		\multicolumn{1}{|p{1.61in}|}{\textbf{Impact:1} } \\
+		\hhline{-----}
+		%row no:3
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Description:} \par The internet connection fails.} \\
+		\hhline{-----}
+		%row no:4
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Refinement/Context: } \par \textbf{Sub-condition 1: }Connection fails due to fault at the ISP. \par \textbf{Sub-condition 2: }There is some lose contact of cables to the modem.   } \\
+		\hhline{-----}
+		%row no:5
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Mitigation/Monitoring:} \par 1. Contact the ISP provider and resolve the issues.\par 2. Fix the cable properly } \\
+		\hhline{-----}
+		%row no:6
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Management/Contingency plan/Trigger:} \par Provide some alternative solution for internet like hotspot. Or make a provision for offline data storage.} \\
+		\hhline{-----}
+		%row no:7
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Current status:} \par Mitigation steps have been initialized.} \\
+		\hhline{-----}
+		%row no:8
+		\multicolumn{2}{|p{2.91in}}{\textbf{Originator:}} & 
+		\multicolumn{3}{|p{3.18in}|}{\textbf{Assigned:}} \\
+		\hhline{-----}
+	\end{tabular}
+\end{table}
+
+
+\newpage
+\subsection{Risk Template}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{1.28in}p{1.44in}p{-0.13in}p{1.3in}p{1.61in}}
+		\hline
+		%row no:1
+		\multicolumn{5}{|p{6.29in}|}{{\fontsize{14pt}{16.8pt}\selectfont \textbf{Risk information sheet}}} \\
+		\hhline{-----}
+		%row no:2
+		\multicolumn{1}{|p{1.28in}}{\textbf{Risk ID:3} } & 
+		\multicolumn{2}{|p{1.5in}}{\textbf{Date:September 30, 2019} } & 
+		\multicolumn{1}{|p{1.3in}}{\textbf{Probability:30\%}} & 
+		\multicolumn{1}{|p{1.61in}|}{\textbf{Impact:2} } \\
+		\hhline{-----}
+		%row no:3
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Description:} \par The scanners fail to read the RFIDs.} \\
+		\hhline{-----}
+		%row no:4
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Refinement/Context: } \par \textbf{Sub-condition 1: }RFID / Scanner interface is tampered. \par \textbf{Sub-condition 2: }Incompatible scanner and RFIDs   } \\
+		\hhline{-----}
+		%row no:5
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Mitigation/Monitoring:} \par 1. Make sure the interface is clean. Check if the RFID is not damaged.\par 2. Try scanning the same RFID on another sensor or scan another RFID on the sensor. } \\
+		\hhline{-----}
+		%row no:6
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Management/Contingency plan/Trigger:} \par Get technical assistance as soon as possible. Find out the problem location (Scanner or RFID) and take actions accordingly} \\
+		\hhline{-----}
+		%row no:7
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Current status:} \par Mitigation steps have been initialized.} \\
+		\hhline{-----}
+		%row no:8
+		\multicolumn{2}{|p{2.91in}}{\textbf{Originator:}} & 
+		\multicolumn{3}{|p{3.18in}|}{\textbf{Assigned:}} \\
+		\hhline{-----}
+	\end{tabular}
+\end{table}
+
+
+\subsection{Risk Template}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{1.28in}p{1.44in}p{-0.13in}p{1.3in}p{1.61in}}
+		\hline
+		%row no:1
+		\multicolumn{5}{|p{6.29in}|}{{\fontsize{14pt}{16.8pt}\selectfont \textbf{Risk information sheet}}} \\
+		\hhline{-----}
+		%row no:2
+		\multicolumn{1}{|p{1.28in}}{\textbf{Risk ID:4} } & 
+		\multicolumn{2}{|p{1.5in}}{\textbf{Date:September 30, 2019} } & 
+		\multicolumn{1}{|p{1.3in}}{\textbf{Probability:20\%}} & 
+		\multicolumn{1}{|p{1.61in}|}{\textbf{Impact:2} } \\
+		\hhline{-----}
+		%row no:3
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Description:} \par RFID tag gets damaged.} \\
+		\hhline{-----}
+		%row no:4
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Refinement/Context: } \par \textbf{Sub-condition 1: }The RFID tag is missing from a cargo when it reaches a scanner. \par \textbf{Sub-condition 2: }The tag is damaged due to weather conditions / mishandling, etc.    } \\
+		\hhline{-----}
+		%row no:5
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Mitigation/Monitoring:} \par 1. . Try to identify the cargo with the marking on it.\par 2. Wait for the user to raise a ticket when he notices that one of his cargo containers has not reached the desired destination yet. The cargo can then be linked with the ticket and the right identity of it can be found. A new RFID can be associated to it at this point and the tracing can continue as before. } \\
+		\hhline{-----}
+		%row no:6
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Management/Contingency plan/Trigger:} \par Have spare RFIDs at all counters.} \\
+		\hhline{-----}
+		%row no:7
+		\multicolumn{5}{|p{6.29in}|}{\textbf{Current status:} \par Mitigation steps have been initialized.} \\
+		\hhline{-----}
+		%row no:8
+		\multicolumn{2}{|p{2.91in}}{\textbf{Originator:}} & 
+		\multicolumn{3}{|p{3.18in}|}{\textbf{Assigned:}} \\
+		\hhline{-----}
+	\end{tabular}
+\end{table}
+
+
+
+\newpage
+
+\section{TIMETABLE}
+\begin{figure}[h!]
+	\caption{Gantt Chart}
+	\fbox{\includegraphics[width=16cm,height=7cm]{GanttChart.png}}
+\end{figure}
+
+
+
+
+\end{document}
