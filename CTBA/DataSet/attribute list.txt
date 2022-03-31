@@ -1,0 +1,27 @@
+Prediction Algos to be used:
+-Adaboost
+-Regression models
+
+
+Attributes:
+-unique id across all transport legs
+-unique id per baggage
+-time1-planned duration (minutes) of incoming transport leg 1 
+-totaltime1 -effective (i.e., actual) duration (minutes) of incoming transport leg 1 
+-hops - number of segments (hops) in the transport leg of incoming transport leg 1
+-place1 - unique id for airport/first halt 
+-legs - number of incoming transport legs of overall process
+
+-commodity name
+-qty in single carts
+-total carts
+-cost of indiviual commodity
+-total cost=qty*indiviual
+-time delay btwn 2 shipments
+-Selling Pice per cart
+-profit per cart
+-loss per cart
+
+-sales per month
+-estimated sales in 3 yrs/a month
+-estimated demand supply difference

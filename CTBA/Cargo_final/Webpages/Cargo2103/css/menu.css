@@ -1,0 +1,49 @@
+.search{
+	margin: auto;
+	float: none !important;
+	margin-top: 2%;
+}
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 650px;
+}
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 21px;
+    height: 16%;
+}
+div.tab button:hover {
+    background-color: #ffd6b8;
+    /*ddd*/
+}
+div.tab button.active {
+    background-color: #ffb680;
+    color: #fff;
+    /*ccc*/
+}
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 650px;
+}
+.glyphicon {
+	margin: 2px 50px 2px 50px;
+}
+.glyphicon-trash {
+	margin-right: 0px !important;
+}
